@@ -14,11 +14,24 @@ const { NotImplementedError } = require('../extensions/index.js');
  * ]) => 3`
  *
  */
-function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
-}
+
+function countCats(matrix) { /*Для перебора многомерного массива необходимо 
+использовать вложенный цикл. 
+Первый цикл (i) будет использоваться для доступа к элементам внешнего массива, 
+а второй (j) – для доступа к элементам вложенных массивов.*/
+  let result = 0;
+  for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] == "^^") {
+        result++;
+      }
+    }
+  }
+  return result;
+};
 
 module.exports = {
   countCats
 };
+
+
