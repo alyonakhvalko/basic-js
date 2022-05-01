@@ -12,7 +12,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(/* date */) {
-  
+
   try {
     date.getTimezoneOffset();
   } catch {
@@ -48,3 +48,6 @@ function getSeason(/* date */) {
 module.exports = {
   getSeason
 };
+
+
+
