@@ -14,7 +14,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For 00-1B-63-84-45-E6, the output should be true.
  *
  */
-function isMAC48Address(/* n */) {
+function isMAC48Address(n) {
   let arr = n.split("-");
   if (arr.length === 6) {
     return arr.every(item => item.match("[0-9A-F]{2}"))
