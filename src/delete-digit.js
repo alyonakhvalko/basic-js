@@ -11,10 +11,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For n = 152, the output should be 52
  *
  */
+
+//удаляет наименьшее число в массиве, но не возвращает наибольшее из набора
 function deleteDigit(n) {
   let arr = n.toString().split('').map(i => +i);
-  console.log(arr)
-  arr = arr.slice(); //copy the array
+  arr = arr.slice(); //копировать arr
   arr.splice( arr.indexOf(Math.min.apply(null, arr)),1)
   return +arr.join('');
 }
